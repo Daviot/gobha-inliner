@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var inlineSource = require('inline-source').sync;
+var inlineSource = require("inline-source").sync;
 var minimatch = require("minimatch");
 
 /*
@@ -11,21 +11,28 @@ var minimatch = require("minimatch");
  */
 
 var inline = function(options) {
-    console.log(options)
-    var patternDefault = ["*.html"];
-	if (options.pattern == null) {
-        options.pattern = patternDefault;
-    }
-    if(typeof options.pattern == 'String') {
-        options.pattern = [options.pattern];
-    }
+  console.log(options);
+  var patternDefault = ["*.html"];
+  if (options.pattern == null) {
+    options.pattern = patternDefault;
+  }
+  if (typeof options.pattern == "String") {
+    options.pattern = [options.pattern];
+  }
   return function(files, metalsmith, done) {
-    var htmlFiles = Object.keys(files).filter((file) => { return options.pattern.filter((pattern) => {
-        return minimatch(file, pattern, { matchBase: true })
-    }).length > 0});
+    var htmlFiles = Object.keys(files).filter(file => {
+      return (
+        options.pattern.filter(pattern => {
+          return minimatch(file, pattern, { matchBase: true });
+        }).length > 0
+      );
+    });
 
     htmlFiles.map(function(path) {
-      files[path].contents = new Buffer(inlineSource(files[path].contents.toString(), options)), 'utf8';
+      (files[path].contents = new Buffer(
+        inlineSource(files[path].contents.toString(), options)
+      )),
+        "utf8";
     });
     done();
   };
