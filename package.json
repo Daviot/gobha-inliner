@@ -1,0 +1,29 @@
+{
+  "name": "gobha-inliner",
+  "version": "0.0.1",
+  "description": "Metalsmith Plugin to inline static assets like SVG, Javascript and CSS",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daviot/gobha-inliner.git"
+  },
+  "main": "inliner.js",
+  "directories": {},
+  "dependencies": {
+    "inline-source": "^4.2.2",
+    "minimatch": "^3.0.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gobha",
+    "metalsmith"
+  ],
+  "author": "Daviot <gobha@daviot.at>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Daviot/gobha-inliner/issues"
+  },
+  "homepage": "https://github.com/Daviot/gobha-inliner#readme"
+}
