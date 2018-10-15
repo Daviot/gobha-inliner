@@ -9,7 +9,7 @@
   "main": "inliner.js",
   "directories": {},
   "dependencies": {
-    "inline-source": "^6.1.1",
+    "inline-source": "^6.1.8",
     "minimatch": "^3.0.4"
   },
   "devDependencies": {},
