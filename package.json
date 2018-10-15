@@ -1,6 +1,6 @@
 {
   "name": "gobha-inliner",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Metalsmith Plugin to inline static assets like SVG, Javascript and CSS",
   "repository": {
     "type": "git",
